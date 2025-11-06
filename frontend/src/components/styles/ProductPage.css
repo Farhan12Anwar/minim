@@ -1,0 +1,190 @@
+.minimal-product-page {
+  background: #fafafb;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  padding-bottom: 30px;
+}
+
+.header.minimal-header {
+  background: none;
+  color: #212223;
+  box-shadow: none;
+  padding: 18px 0 15px 21px;
+  font-size: 1.32em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.logo { font-weight: 700; letter-spacing: 2px; font-size: 1.34em; }
+.minimal-nav {
+  display: flex; align-items: center; gap: 34px; font-size: 0.96em; font-weight: 500;
+}
+.minimal-nav .right-link { margin-left: 68px; color: #888; font-size: 0.91em;}
+.minimal-nav a { color: #222; text-decoration: none; letter-spacing: 1.3px; transition: color .19s;}
+.minimal-nav a:hover { color: #181818; }
+
+.content-grid {
+  margin: 0 auto; margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  max-width: 1100px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px 18px 0;
+}
+
+.product-title {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -1.5px;
+  color: #181818;
+  line-height: 0.98;
+  animation: fadeIn .8s cubic-bezier(.22,1,.36,1);
+}
+.product-id {
+  font-size: 0.88em;
+  color: #aaa;
+  margin-bottom: 17px;
+}
+.product-price {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 4px 0 18px 0;
+  letter-spacing: -.5px;
+  color: #222;
+  animation: fadeInUp .5s;
+}
+.product-desc {
+  font-size: 0.97em;
+  color: #646669;
+  font-weight: 500;
+  margin-bottom: 24px;
+  line-height: 1.62;
+}
+.product-specs {
+  font-size: 0.95em;
+  line-height: 2.1;
+  color: #222;
+  margin-bottom: 36px;
+}
+.product-specs span {
+  font-weight: 600;
+  margin-right: 14px;
+  color: #777;
+}
+
+.buy-row {
+  display: flex; align-items: center; gap: 9px; margin-top:18px;
+}
+.minimal-btn {
+  font-size: 1.2em;
+  background: #f2f3f7;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  font-weight: 400;
+  color: #333;
+  transition: background .19s, transform .17s;
+  cursor: pointer;
+}
+.minimal-btn:hover { background: #e1e4ee; transform: scale(1.13); }
+.qty { font-size: 1.13em; width: 28px; text-align: center; }
+.add-to-cart-btn {
+  background: #212223;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 28px;
+  font-size: 1.1em;
+  margin-left: 22px;
+  box-shadow: 0 2px 18px rgba(32,99,247,0.07);
+  transition: background .21s, color .19s, transform .16s;
+  cursor: pointer;
+}
+.add-to-cart-btn:hover {
+  background: #181818;
+  color: #fff;
+  transform: scale(1.06);
+}
+
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 14px;
+}
+
+.main-img-box {
+  width: 420px; height: 320px;
+  overflow: hidden;
+  background: #f7f8fd;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 18px;
+  box-shadow: 0 7px 19px rgba(32,99,247, .10);
+  margin-bottom: 22px;
+  animation: fadeIn 1.2s cubic-bezier(.22,1,.36,1);
+}
+.main-product-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform .32s cubic-bezier(.22,1,.36,1), box-shadow .26s;
+}
+.main-product-img:hover {
+  transform: scale(1.09) rotate(-2deg);
+  box-shadow: 0 4px 24px rgba(32,99,247, .16);
+}
+
+.thumb-row {
+  display: flex;
+  gap: 18px;
+  margin-top: 7px;
+  justify-content: center;
+}
+
+.thumb-img {
+  width: 84px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f7f7fa;
+  box-shadow: 0 1px 9px rgba(28,63,122, .08);
+  cursor: pointer;
+  opacity: .74;
+  transition: opacity .21s, transform .16s, box-shadow .15s;
+  border: 2px solid transparent;
+}
+.thumb-img:hover {
+  opacity: 1;
+  transform: scale(1.09);
+  box-shadow: 0 4px 24px rgba(32,99,247, .13);
+}
+.active-thumb {
+  opacity: 1;
+  border-color: #181818;
+}
+
+/* Responsive */
+@media (max-width:1050px){
+  .main-img-box{width:92vw;max-width:375px;}
+  .content-grid{max-width:98vw;display:block;}
+  .gallery-section,.product-details{margin:auto;padding:0;}
+}
+@media (max-width:670px){
+  .main-img-box{height:150px;}
+  .thumb-img{width:44px;height:38px;}
+  .product-title{font-size:1.29em;}
+  .product-price{font-size:1.06em;}
+}

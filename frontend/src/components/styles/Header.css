@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+.minimal-home-page {
+  background: #f5f5f7; /* soft cool grey */
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.09em;
+  color: #888; /* slightly darker text for contrast */
+}
+
+
+.header.minimal-header {
+  background: none;
+  color: #212223;
+  box-shadow: none;
+  padding: 19px 0 16px 27px;
+  font-size: 1.19em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0f0f0;
+  animation: fadeIn 0.8s cubic-bezier(.22,1,.36,1);
+}
+
+.logo { font-weight: 700; letter-spacing: 1.8px; font-size: 1.16em; }
+.minimal-nav { display: flex; align-items: center; gap: 34px; font-size: 0.96em; font-weight: 500;}
+.minimal-nav .active { color: #6a6a6a; border-bottom: 2px solid #888; }
+.minimal-nav .right-link { margin-left: 50px; color: #888; font-size: 0.91em;}
+.minimal-nav a { color: #888; text-decoration: none; letter-spacing: 1.1px; transition: color .19s; }
+.minimal-nav a:hover { color: #000000;}
+
+.homepage-main { width: 98vw; max-width: 1200px; margin: 0 auto; padding-bottom: 32px;}
+
+.hero-home {
+  text-align: left;
+  padding: 48px 0 26px 0;
+  max-width: 600px;
+  /* margin: 0 auto; */
+  background: none;
+  box-shadow: none;
+  animation: fadeIn .82s cubic-bezier(.22,1,.36,1);
+}
+
+.hero-title { font-size: 3em; font-weight: 700; letter-spacing: -1px; margin-bottom: 14px; color: #1a1a1a;}
+.hero-subtitle { font-size: 1.17em; color: #60636a; font-weight: 400; margin-bottom: 22px;}
+.hero-cta {
+  display: inline-block;
+  background: #212223;
+  color: #fff;
+  font-weight: 500;
+  border: none; border-radius: 8px;
+  padding: 13px 36px;
+  font-size: 1.09em;
+  margin-top: 8px;
+  box-shadow: 0 1px 15px rgba(32,99,247,0.12);
+  transition: background .21s, color .17s, transform .18s;
+  cursor: pointer;
+}
+.hero-cta:hover {
+  background:black;
+  color: #fff;
+  transform: scale(1.09);
+}
+
+.hero-banner2 {
+  background:#f6f1e3;
+  color:black ;
+  border-radius: 20px;
+  padding: 20px;
+  width:auto;
+}
+
+.section-title {
+  font-size: 2.19em;
+  font-weight: 700;
+  margin-top: 41px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 54px;
+  align-items: stretch; /* Ensures all grid items are equal height */
+}

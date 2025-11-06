@@ -1,0 +1,2 @@
+.loading-spinner { width:48px; height:48px; border:6px solid #e4e4f9; border-top:6px solid #2063f7; border-radius:50%; animation:spin 0.9s linear infinite; margin:80px auto;}
+@keyframes spin {to{transform:rotate(360deg);}}

@@ -1,0 +1,2 @@
+.back-to-top { position:fixed; right:32px; bottom:40px; padding:10px 16px; background:#2063f7; color:#fff; border:none; border-radius:50%; font-size:1.3em; font-weight:900; box-shadow:0 6px 22px rgba(50,70,130,0.12); cursor:pointer; z-index:110; opacity: 0.8; transition: background .18s;}
+.back-to-top:hover {background:#00e4d8; color:#222;}
