@@ -13,7 +13,15 @@ const Cart = require('./models/Cart');
 const app = express();
 
 // Middleware
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({
+  origin: [
+    'http://localhost:3000',            // local dev
+    'https://minim-th9h.onrender.com',  // your Render backend
+    'https://minims.netlify.app/' // <-- replace with your deployed frontend URL
+  ],
+  credentials: true
+}));
+
 app.use(express.json()); // Use express.json instead of bodyParser
 
 // MongoDB connection
