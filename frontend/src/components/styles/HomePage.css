@@ -79,14 +79,14 @@
 
 .minimal-product-card:hover {
   transform: scale(1.04);
-  box-shadow: 0 11px 29px rgba(32,99,247, 0.15);
+  box-shadow: 0 11px 29px grey;
   border-radius: 13px;
 }
 
 .minimal-product-img-box {
   width: 100%;
   height: 260px;
-  background: #f7f8fd;
+  background: #f5f5f7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,20 +113,20 @@
 /* On card hover, shadow only the image */
 .minimal-product-card:hover .minimal-product-img-box img {
   /* transform: scale(1.08); */
-  box-shadow: 0 8px 30px 0 rgba(32,99,247,0.25), 0 1.5px 5px 0 rgba(40,40,40,.07);
+  box-shadow: 0 8px 30px 0 rgba(86, 86, 86, 0.25), 0 1.5px 5px 0 rgba(40,40,40,.07);
 }
 
 
 .minimal-product-card:hover .minimal-product-img-box img {
   /* transform: scale(1.08); */
-  box-shadow: 0 10px 20px rgba(32,99,247,0.13);
+  box-shadow: 0 10px 20px rgba(38, 38, 38, 0.13);
   /* DO NOT set border-radius here */
   border-radius: 13px;
 }
 
 .minimal-product-card:hover img {
   transform: translateY(+5px);
-  box-shadow: 0 10px 20px rgba(32, 99, 247, 0.2);
+  box-shadow: 0 10px 20px grey;
   border-radius: 13px;         /* <-- ADD THIS! */
 }
 
@@ -135,13 +135,13 @@
   position: absolute;
   bottom: 16px; left: 50%; transform: translateX(-50%);
   opacity: 0;
-  background: #00e4d8;
+  background: grey;
   color: #212223;
   border: none;
   border-radius: 8px;
   padding: 7px 22px;
   font-weight: 500;
-  box-shadow: 0 1px 11px rgba(32,99,247,.08);
+  box-shadow: 0 1px 11px grey;
   transition: opacity .21s, background .17s, color .13s;
   cursor: pointer;
 }
@@ -227,7 +227,6 @@
   font-size: 1em;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 1px 7px rgba(32,99,247,0.09);
   transition: background .21s, color .16s, transform .14s;
 }
 .filter-active, .filter-btn:hover {
@@ -243,7 +242,7 @@
 
 
 .recommended-section {
-  background: linear-gradient(90deg, #e2f7ef 10%, #f7ece2 90%);
+  background: #fffbf4;
   border-radius: 29px;
   margin-top: 54px;
   padding: 48px 0 60px 0;
@@ -266,9 +265,10 @@
 }
 
 .recommended-card {
+  font-family: 'Roboto', sans-serif;
   background: #fff;
-  border-radius: 21px;
-  box-shadow: 0 18px 32px rgba(32,99,247,.16);
+  /* border-radius: 21px; */
+  box-shadow: 0 18px 32px grey;
   min-width: 340px;
   max-width: 370px;
   padding: 37px 22px 25px 22px;
@@ -276,13 +276,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 2.5px solid #00e4d8;
   outline-offset: -9px;
   transition: box-shadow .21s, outline-color .17s, transform .18s;
 }
 
 .recommended-card:hover {
-  box-shadow: 0 26px 40px rgba(32,99,247, .22);
+  box-shadow: 0 26px 40px grey;
   outline-color: #000000;
   transform: translateY(-10px) scale(1.04);
 }
@@ -294,7 +293,7 @@
   background: #f6f8fa;
   overflow: hidden;
   margin-bottom: 21px;
-  box-shadow: 0 2px 13px rgba(40,40,40,.09);
+  box-shadow: 0 2px 13px grey;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -309,7 +308,7 @@
 }
 
 .recommended-card:hover .recommended-img-box img {
-  box-shadow: 0 0px 22px #22d17969;
+  box-shadow: 0 0px 22px grey;
   transform: scale(1.09);
 }
 
@@ -324,7 +323,7 @@
   padding: 6px 19px;
   border-radius: 9px;
   letter-spacing: 1.2px;
-  box-shadow: 0 1px 7px rgba(32,99,247,.12);
+  box-shadow: 0 1px 7px grey;
 }
 
 .recommended-name {
@@ -348,7 +347,7 @@
 }
 .price-tag {
   font-weight: 700;
-  color: #22d179;
+  color: #000000;
   font-size: 1.13em;
 }
 .recommended-type {
@@ -372,4 +371,185 @@
 
 @media (max-width:900px){
   .recommended-grid{ flex-direction: column; align-items: center;}
+}
+
+.maincard-add-btn {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 5px;
+  width: 88%;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.08em;
+  padding: 12px 0;
+  cursor: pointer;
+  box-shadow: 0 1px 7px grey;
+  transition: background .18s, transform .13s;
+}
+
+.maincard-add-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: scale(1.04);
+}
+
+.promo-section {
+  /* background: #fff; */
+  border-radius: 21px;
+  margin: 55px auto 0 auto;
+  max-width: 1200px;
+  /* box-shadow: 0 7px 28px rgba(32,99,247,0.06); */
+  padding: 38px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 44px;
+}
+
+.promo-image-col {
+  flex: 0 0 320px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align left in container */
+  min-width: 220px;
+  /* Ensure possible overflow */
+  overflow: visible;
+  position: relative;
+}
+
+/* Main styling for spill effect */
+.spilling-img {
+  width: 115%;
+  max-width: 420px;
+  height: auto;
+  object-fit: cover;
+  border-top-right-radius: 80px 200px;
+  border-bottom-right-radius: 80px 200px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #fff;
+  margin-left: -18px;
+
+  /* Custom box-shadow: mostly right + bottom-right to match spill */
+  box-shadow:
+    24px 12px 60px 0px grey,                /* Main soft shadow for "spilling" right */
+    12px 24px 50px -14px grey,              /* Further out, more transparent right */
+    8px 4px 30px 0px grey;       /* Subtle secondary spill */
+
+  /* Optional: hard shadow edge right at the straight left cut */
+  filter: drop-shadow(-2px 0 8px #fff);
+}
+
+
+
+.promo-text-col {
+  font-size: 25px;
+  padding-left:300px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.promo-title {
+  font-size: 2em;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 14px;
+}
+
+.promo-desc {
+  font-size: 1.14em;
+  color: #60636a;
+  margin-bottom: 21px;
+}
+
+.promo-btn {
+  background: #000000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 13px 40px;
+  font-size: 1.09em;
+  transition: background .17s, transform .14s;
+  margin-top: 6px;
+  box-shadow: 0 2px 10px grey;
+  border: none;
+  cursor: pointer;
+}
+
+.promo-btn:hover {
+  background: #000000;
+  transform: scale(1.07);
+}
+
+@media (max-width:900px) {
+  .promo-section, .promo-container {
+    flex-direction: column;
+    gap: 28px;
+    padding: 24px 7px;
+    align-items: stretch;
+  }
+  .promo-image-col { min-width: 0; max-width: 400px; }
+  .promo-img { max-width: 100%; }
+  .promo-text-col { align-items: center; text-align: center; }
+}
+
+/* Make images square, not round */
+.recommended-img-box.square-img-box {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;           /* Square with subtly rounded edges */
+  background: #f6f8fa;
+  overflow: hidden;
+  margin-bottom: 21px;
+  box-shadow: 0 2px 13px rgba(40,40,40,.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recommended-img-box.square-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: box-shadow .21s, transform .13s;
+  box-shadow: 0 0px 11px rgba(40,40,40,.09);
+}
+
+/* Add to Cart button in recommendation card */
+.rec-add-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  width: 85%;
+  background: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.02em;
+  padding: 9px 0;
+  cursor: pointer;
+  box-shadow: 0 1px 7px grey;
+  transition: background .16s, transform .13s;
+}
+.rec-add-btn:hover {
+  background: #000000;
+  color: #fff;
+  /* transform: scale(1.04); */
+}
+
+.spac {
+  height:30px;
 }

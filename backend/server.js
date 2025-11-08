@@ -3,6 +3,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+require('dotenv').config();
 
 // Models - Make sure these exist in /models
 const Product = require('./models/Product');
@@ -16,7 +17,7 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(express.json()); // Use express.json instead of bodyParser
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://anwarfarhan339_db_user:cannonx100@cluster0.jt15riq.mongodb.net/?appName=Cluster0', {});
+mongoose.connect(process.env.MONGO_URI, {});
 
 // ROUTES
 

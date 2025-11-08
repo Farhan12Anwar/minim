@@ -1,99 +1,223 @@
-.footer.minimal-footer.custom-footer {
-  background: #f5f5f7;
-  color: #212223;
-  border-top: 2px solid #ececec;
-  font-size: 1.12em;
-  padding: 36px 0 10px 0;
-  margin-top: 50px;
-  width: 100%;
-  letter-spacing: 1.03px;
+.clothify-footer {
+  background: #dadada;
+  color: #222;
+  padding: 58px 0 16px 0;
   font-family: 'Lato', Arial, sans-serif;
+  /* border-top: 2px solid #e0e8f8; */
+  width: 100%;
 }
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.footer-main-row {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
   gap: 34px;
-  flex-wrap: wrap;
-  padding-bottom: 18px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 0 40px;
 }
 
-.footer-brand {
+
+/* SUBSCRIBE COLUMN */
+.footer-subscribe-block {
+  flex: 0 0 25%;
+  min-width: 220px;
+  max-width: 25%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
+  align-items: center;        /* center its contents horizontally */
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  margin-left: 35px;
+  margin-top: 3px;
+  text-align: center;         /* center text inside */
 }
-.footer-logo {
+.footer-subscribe-title {
+  font-size: 1.19em;
+  color: #000000;
   font-weight: 800;
-  font-size: 1.23em;
-  letter-spacing: 1.6px;
-}
-.footer-tagline {
-  font-size: 0.98em;
-  color: #60636a;
-  font-weight: 500;
+  letter-spacing: .7px;
+  margin-bottom: 13px;
+  text-align: center;
 }
 
-.footer-contact {
-  font-size: 1.07em;
+.footer-subscribe-form {
+  display: flex;
+  width: 100%;
+  max-width: 320px;
+  justify-content: center;
+}
+.footer-subscribe-input {
+  border: none;
+  background: #fff;
+  border-radius: 10px 0 0 10px;
+  font-size: 1em;
+  padding: 13px 17px;
+  outline: none;
+  color: #222;
+  box-shadow: 0 1px 8px grey;
+  font-family: 'Lato', Arial, sans-serif;
+  flex: 1 1 0;
+  /* min-width: 0; */
+  border-right: 0;
+}
+.footer-subscribe-btn {
+  font-family: 'Lato', sans-serif;
+  background: #000000;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  font-size: 1.09em;
+  padding: 13px 21px;
+  box-shadow: 0 1px 8px grey;
+  cursor: pointer;
+  transition: background .17s, transform .14s;
+  flex: 0 0 auto;
+}
+.footer-subscribe-btn:hover {
+  background: hsl(0, 0%, 0%);
+  color: #fff;
+  transform: scale(1.07);
+}
+
+/* BRAND COLUMN */
+.footer-brand-col {
+  max-width: 380px;
+  flex: 1 1 330px;
+  min-width: 260px;
+}
+.clothify-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 7px;
+}
+.clothify-logo {
+  font-weight: 800;
+  font-size: 2.1em;
+  color: #000000;
+  letter-spacing: 1.2px;
+}
+.clothify-tagline {
+  font-size: 1.1em;
+  color: #000000;
+  font-weight: 600;
+  letter-spacing: .45px;
+}
+.footer-address {
+  font-size: 1.03em;
+  color: #25282b;
+  margin: 18px 0 7px 0;
+}
+.footer-address strong {
+  font-weight: 700;
+  color: #000000;
+  display: block;
+  margin-bottom: 3px;
+}
+.footer-social-row {
+  display: flex;
+  gap: 18px;
+  margin: 19px 0 0 0;
+}
+.footer-social-icon {
+  font-size: 1.3em;
+  background: #e0eafc;
+  color: #000000;
+  border-radius: 9px;
+  padding: 7px;
+  transition: background .18s, color .18s, transform .14s;
+  box-shadow: 0 1px 7px rgba(32,99,247,0.09);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-social-icon:hover {
+  background: #00e4d8;
+  color: #fff;
+  transform: scale(1.12) translateY(-2px);
+}
+
+/* LINKS COLUMN */
+.footer-links-group {
+  display: flex;
+  gap: 60px;
+  flex: 3 1 600px;
+  justify-content: flex-start;
+  min-width: 340px;
+}
+.footer-links-group > div {
+  min-width: 120px;
+  flex: 1 1 150px;
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-.footer-contact a {
-  color: #2063f7;
+.footer-links-group h4 {
+  font-size: 1.18em;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.footer-links-group a {
+  color: #222;
   text-decoration: none;
-  border-bottom: 1.5px dotted #2063f7;
-  transition: color .18s, border-color .19s;
+  font-size: 1em;
+  letter-spacing: .05px;
+  padding: 2px 0;
+  transition: color .17s;
 }
-.footer-contact a:hover {
-  color: #00e4d8;
-  border-color: #00e4d8;
-}
-
-.footer-socials {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-.footer-icon {
-  font-size: 1.65em;
-  background: #ececec;
-  color: #2063f7;
-  border-radius: 10px;
-  padding: 7px;
-  transition: background .17s, color .2s, transform .15s;
-  box-shadow: 0 1px 7px rgba(32,99,247,0.11);
-}
-.footer-icon:hover {
-  background: #00e4d8;
-  color: #fff;
-  transform: scale(1.17) translateY(-2px);
+.footer-links-group a:hover {
+  color: #000000;
 }
 
-.footer-divider {
-  height: 1.6px;
-  background: #ececec;
-  border-radius: 9px;
-  max-width: 1200px;
-  margin: 16px auto;
-  opacity: 0.9;
+/* Separator & Bottom */
+.footer-separator {
+  margin: 30px auto 14px auto;
+  max-width: 1300px;
+  height: 1.5px;
+  background: grey;
+  border-radius: 100px;
+  opacity: 0.85;
 }
 
-.footer-copyright {
+.footer-bottom-row {
   text-align: center;
-  margin-top: 8px;
-  font-size: 0.99em;
-  color: #89898d;
+  color: #000000;
+  font-size: 0.98em;
   letter-spacing: 0.6px;
+  margin: 0;
+  padding-bottom: 6px;
 }
 
-/* Responsive styles */
-@media (max-width:750px) {
-  .footer-content { flex-direction: column; gap: 21px; align-items: flex-start; padding-bottom: 8px;}
-  .footer-socials { margin-top: 10px; }
+/* Responsive: stack columns at tablet/mobile */
+@media (max-width:1050px) {
+  .footer-main-row {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-subscribe-block,
+  .footer-brand-col,
+  .footer-links-group {
+    max-width: unset;
+    min-width: unset;
+    flex: 1 1 100%;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .footer-subscribe-form { max-width: 100%; }
+}
+
+/* Improve stack for very small screens */
+@media (max-width:600px) {
+  .footer-main-row {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .footer-links-group {
+    gap: 16px;
+  }
 }
