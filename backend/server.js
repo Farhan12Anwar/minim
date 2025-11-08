@@ -15,12 +15,13 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-    'http://localhost:3000',            // local dev
-    'https://minim-th9h.onrender.com',  // your Render backend
-    'https://minims.netlify.app/' // <-- replace with your deployed frontend URL
+    'http://localhost:3000',              // local dev
+    'https://minims.netlify.app',         // ✅ your deployed frontend
   ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
+
 
 app.use(express.json()); // Use express.json instead of bodyParser
 
