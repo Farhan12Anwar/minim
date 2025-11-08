@@ -12,7 +12,7 @@ function ContactPage() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/contact', form)
+    axios.post('https://minim-th9h.onrender.com/api/contact', form)
       .then(() => {
         setShowToast(true);
         setForm({ name: '', email: '', message: '' });

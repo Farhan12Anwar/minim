@@ -21,14 +21,14 @@ export function CartProvider({ children }) {
 
   useEffect(() => {
     const sessionId = getLocalSession();
-    axios.get('/api/cart', { headers: { 'x-session-id': sessionId } })
+    axios.get('https://minim-th9h.onrender.com/api/cart', { headers: { 'x-session-id': sessionId } })
       .then(res => setCart(res.data.cart));
   }, []);
 
   // Add to cart with backend call
   function addToCart(product) {
     const sessionId = getLocalSession();
-    return axios.post('/api/cart/add',
+    return axios.post('https://minim-th9h.onrender.com/api/cart/add',
       { productId: product._id, quantity: 1 }, { headers: { 'x-session-id': sessionId } }
     ).then(res => {
       setCart(res.data.cart);
@@ -38,7 +38,7 @@ export function CartProvider({ children }) {
   // REMOVE FROM CART FUNCTION
   function removeFromCart(productId) {
     const sessionId = getLocalSession();
-    return axios.post('/api/cart/remove', { productId }, { headers: { 'x-session-id': sessionId } })
+    return axios.post('https://minim-th9h.onrender.com/api/cart/remove', { productId }, { headers: { 'x-session-id': sessionId } })
       .then(res => setCart(res.data.cart));
   }
 

@@ -24,11 +24,11 @@ function ProductPage({ params }) {
     setLoading(true);
 
     // Get active product
-    axios.get(`/api/products/${productId}`)
+    axios.get(`https://minim-th9h.onrender.com/api/products/${productId}`)
       .then(res => setProduct(res.data));
 
     // Get all products for recommendations in parallel
-    axios.get('/api/products')
+    axios.get('https://minim-th9h.onrender.com/api/products')
       .then(res => setAllProducts(res.data))
       .finally(() => setLoading(false));
   }, [productId]);

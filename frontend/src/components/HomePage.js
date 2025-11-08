@@ -17,7 +17,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('/api/products')
+    axios.get('https://minim-th9h.onrender.com/api/products')
       .then(res => {
         setProducts(res.data);
         setLoading(false);
@@ -43,7 +43,7 @@ function HomePage() {
         <section className="hero-home animated-fade">
           <h1 className="hero-title">Discover Fresh Styles</h1>
           <p className="hero-subtitle">From office essentials to weekend outfits. All-day comfort, timeless look.</p>
-          <a href="/shop" className="hero-cta animated-btn">Explore Clothing</a>
+          <a href="/" className="hero-cta animated-btn">Explore Clothing</a>
         </section>
         <div className="filters-row">
           {FILTERS.map(type => (
